@@ -1,5 +1,7 @@
 import streamlit as st
 
+from pawpal_system import Owner, Pet, DailyTasks
+
 st.set_page_config(page_title="PawPal+", page_icon="🐾", layout="centered")
 
 st.title("🐾 PawPal+")
@@ -38,10 +40,26 @@ At minimum, your system should:
 
 st.divider()
 
-st.subheader("Quick Demo Inputs (UI only)")
-owner_name = st.text_input("Owner name", value="Jordan")
+# --- Add a Pet --------------------------------------------------------------
+st.subheader("Add a Pet")
+
+# Keep ONE Owner alive across Streamlit reruns (the session "vault").
+if "owner" not in st.session_state:
+    st.session_state.owner = Owner("Jordan", time_availability=90)
+owner = st.session_state.owner
+
+owner.name = st.text_input("Owner name", value=owner.name)
 pet_name = st.text_input("Pet name", value="Mochi")
 species = st.selectbox("Species", ["dog", "cat", "other"])
+breed = st.text_input("Breed", value="")
+age = st.number_input("Age (years)", min_value=0, max_value=40, value=1)
+
+if st.button("Add pet"):
+    owner.add_pet(Pet(pet_name, species=species, breed=breed, age=int(age)))
+    st.success(f"Added {pet_name} 🐾")
+
+if owner.pets:
+    st.write("Pets so far: " + ", ".join(pet.name for pet in owner.pets))
 
 st.markdown("### Tasks")
 st.caption("Add a few tasks. In your final version, these should feed into your scheduler.")

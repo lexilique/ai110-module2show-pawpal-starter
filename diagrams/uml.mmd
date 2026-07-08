@@ -24,9 +24,12 @@ classDiagram
         +int duration_mins
         +str priority
         +str time_start
+        +str frequency
+        +date due_date
         +bool is_completed
         +priority_level() int
-        +mark_complete() None
+        +next_occurrence() DailyTasks
+        +mark_complete() DailyTasks
         +describe() str
     }
 

@@ -62,7 +62,7 @@ Daily plan for Alexa (65 of 90 min used):
   08:10-08:40 — Logan: Morning walk (walk, 30 min, priority: high, preferred 08:00) → chosen (priority high, fit the remaining time)
   08:40-08:45 — Mimo: Give meds (meds, 5 min, priority: medium, preferred 09:00) → chosen (priority medium, fit the remaining time)
   08:45-09:05 — Mimo: Brush fur (grooming, 20 min, priority: low, preferred 12:00) → chosen (priority low, fit the remaining time)
-  
+
 ## 🧪 Testing PawPal+
 
 ```bash
@@ -85,10 +85,10 @@ Sample test output:
 
 | Feature | Method(s) | Notes |
 |---------|-----------|-------|
-| Task sorting | | e.g., by priority, duration |
-| Filtering | | e.g., skip tasks if time runs out |
-| Conflict handling | | e.g., overlapping time slots |
-| Recurring tasks | | e.g., daily vs. weekly |
+| Task sorting | sort_by_time() | sorts by each tasks' start time |
+| Filtering | filter_by_completion(completed)| filters tasks by completion|
+| Conflict handling | detect_conflicts() | filters and notifies user about any conflicts like overlapping start times |
+| Recurring tasks | next_occurrence(), mark_complete()|if recurring task is marked as complete it is returned again in the next plan|
 
 ## 📸 Demo Walkthrough
 

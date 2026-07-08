@@ -24,13 +24,16 @@ I changed the relationship between tasks and pets. This ensure that tasks goes t
 **a. Constraints and priorities**
 
 - What constraints does your scheduler consider (for example: time, priority, preferences)?
+- My scheduler considers what time each task starts and the duration of the task. It also considers priority levels but mainly looks at time
 - How did you decide which constraints mattered most?
+- I prioritized fitting in as many tasks as possible so I focused on when tasks started and how long they were
 
 **b. Tradeoffs**
 
 - Describe one tradeoff your scheduler makes.
+- My scheduler focuses on cramming as many tasks as possible into a plan. So it ignores preferred start times when generating a plan.  
 - Why is that tradeoff reasonable for this scenario?
-
+- This trade off is resonable for this scenario because many tasks are shorter and does not go over the owner's alloted time constraints.
 ---
 
 ## 3. AI Collaboration
