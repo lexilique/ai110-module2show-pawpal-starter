@@ -5,7 +5,49 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
+
+class Owner {
+    + name: str
+    + pets: list[Pet]
+    + time_availability: int
+    + add_pet(Pet)
+} 
+
+class Pet {
+    + name: str
+    + species: str
+    + breed: str
+    + age: int
+    + tasks: list[DailyTasks] tasks  
+    + add_task(task) 
+    + edit_task(index, changes) 
+    + remove_task(index)
+}
+
+class DailyTasks {
+    + name: str
+    + task_type: str
+    + duration_mins: int
+    + priority: str
+    + time_start: str
+    + is_completed: bool
+    + priority_level() int -> gets task's prioirty level
+    + mark_complete()  -> marks task as complete
+    + describe() str  -> describes task
+}
+
+class Scheduler {
+    + Owner owner
+    + list plan
+    + all_tasks() list[DailyTasks] -> gets all tasks
+    + priority_sort(tasks) list[DailyTasks] -> sorts tasks by priority
+    + generate_plan() list -> creates plan
+    + explain() str -> explains plan
+}
+
+
 - What classes did you include, and what responsibilities did you assign to each?
+- 
 
 **b. Design changes**
 
