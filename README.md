@@ -54,6 +54,15 @@ Paste a sample of your app's CLI or Streamlit output here so a reader can see wh
 #   ...
 ```
 
+================================================
+Today's Schedule
+================================================
+Daily plan for Alexa (65 of 90 min used):
+  08:00-08:10 — Logan: Dinner (feed, 10 min, priority: high, preferred 18:00) → chosen (priority high, fit the remaining time)
+  08:10-08:40 — Logan: Morning walk (walk, 30 min, priority: high, preferred 08:00) → chosen (priority high, fit the remaining time)
+  08:40-08:45 — Mimo: Give meds (meds, 5 min, priority: medium, preferred 09:00) → chosen (priority medium, fit the remaining time)
+  08:45-09:05 — Mimo: Brush fur (grooming, 20 min, priority: low, preferred 12:00) → chosen (priority low, fit the remaining time)
+  
 ## 🧪 Testing PawPal+
 
 ```bash

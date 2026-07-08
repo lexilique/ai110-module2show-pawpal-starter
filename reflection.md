@@ -5,54 +5,17 @@
 **a. Initial design**
 
 - Briefly describe your initial UML design.
-
-class Owner {
-    + name: str
-    + pets: list[Pet]
-    + time_availability: int
-    + add_pet(Pet)
-} 
-
-class Pet {
-    + name: str
-    + species: str
-    + breed: str
-    + age: int
-    + tasks: list[DailyTasks] tasks  
-    + add_task(task) 
-    + edit_task(index, changes) 
-    + remove_task(index)
-}
-
-class DailyTasks {
-    + name: str
-    + task_type: str
-    + duration_mins: int
-    + priority: str
-    + time_start: str
-    + is_completed: bool
-    + priority_level() int -> gets task's prioirty level
-    + mark_complete()  -> marks task as complete
-    + describe() str  -> describes task
-}
-
-class Scheduler {
-    + Owner owner
-    + list plan
-    + all_tasks() list[DailyTasks] -> gets all tasks
-    + priority_sort(tasks) list[DailyTasks] -> sorts tasks by priority
-    + generate_plan() list -> creates plan
-    + explain() str -> explains plan
-}
-
+- My inital design had four classes: Owner, Pet, DailyTasks, and Scheduler. 
 
 - What classes did you include, and what responsibilities did you assign to each?
-- 
+- Owner determined how much time the owner had, what pets they had, and the option to add pets. Pet described each pet (e.g. breed, age, etc.), what tasks they were assigned, and the option to add/edit/remove tasks. DailyTasks was what created each task and where the user would add priority, time/duration, and if it was completed. Schedule create the plan and explained why it create the plan.
+
 
 **b. Design changes**
 
 - Did your design change during implementation?
 - If yes, describe at least one change and why you made it.
+I changed the relationship between tasks and pets. This ensure that tasks goes to specific pets in case there are multiple pets
 
 ---
 
