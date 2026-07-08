@@ -77,6 +77,10 @@ Sample test output:
 
 ```
 # Paste your pytest output here
+
+tests/test_pawpal.py .............                            [100%]
+
+======================== 13 passed in 0.05s =========================
 ```
 
 ## 📐 Smarter Scheduling

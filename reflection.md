@@ -41,12 +41,16 @@ I changed the relationship between tasks and pets. This ensure that tasks goes t
 **a. How you used AI**
 
 - How did you use AI tools during this project (for example: design brainstorming, debugging, refactoring)?
+- I used Claude for this project
 - What kinds of prompts or questions were most helpful?
+- I think the prompts where I mentioned certain parts of my code and asked the AI to explain them were the most helpful.
 
 **b. Judgment and verification**
 
 - Describe one moment where you did not accept an AI suggestion as-is.
+- When drafting my UML diagram Claude suggested to add more classes but I had to specify that I only wanted four classes for this program
 - How did you evaluate or verify what the AI suggested?
+- I looked back at the README.md file and the instructions to make sure that what the AI was suggesting followed the intentions of this program.
 
 ---
 
@@ -55,12 +59,16 @@ I changed the relationship between tasks and pets. This ensure that tasks goes t
 **a. What you tested**
 
 - What behaviors did you test?
+- I tested the program's sorting, how it recognized and recreated recurring tasks,  scheduling conflicts, and tested different constraints such as having no availability for tasks.
 - Why were these tests important?
+- These tests are important because they model real life situations. 
 
 **b. Confidence**
 
 - How confident are you that your scheduler works correctly?
+- I am pretty confident that my scheduler works correctly because I made sure to test and consider most edge cases
 - What edge cases would you test next if you had more time?
+- I would test my scheduler's capability to prioritize time and priority levels when making plans.
 
 ---
 
@@ -69,7 +77,7 @@ I changed the relationship between tasks and pets. This ensure that tasks goes t
 **a. What went well**
 
 - What part of this project are you most satisfied with?
-
+- 
 **b. What you would improve**
 
 - If you had another iteration, what would you improve or redesign?
