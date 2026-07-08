@@ -36,13 +36,19 @@ classDiagram
     class Scheduler {
         +Owner owner
         +list plan
+        +list~DailyTasks~ skipped
         +all_tasks() list~DailyTasks~
+        +filter_by_completion(completed) list~DailyTasks~
         +priority_sort(tasks) list~DailyTasks~
+        +sort_by_time(tasks) list~DailyTasks~
         +generate_plan() list
+        +detect_conflicts() str
         +explain() str
     }
 
     Owner "1" --> "*" Pet : owns
-    Pet "1" --> "*" DailyTasks : has
+    Pet "1" <--> "*" DailyTasks : has / belongs to
     Scheduler --> Owner : reads
     Scheduler ..> DailyTasks : schedules
+    DailyTasks ..> Pet : re-adds recurring task
+    DailyTasks ..> DailyTasks : spawns next occurrence

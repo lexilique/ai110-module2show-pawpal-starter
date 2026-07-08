@@ -77,11 +77,13 @@ I changed the relationship between tasks and pets. This ensure that tasks goes t
 **a. What went well**
 
 - What part of this project are you most satisfied with?
-- 
+- I was the most satisfied with creating and reworking the backend of this project. I was able to fix the logic and create a working scheduler
 **b. What you would improve**
 
 - If you had another iteration, what would you improve or redesign?
+- I would add the option to add multiple owners and assign specific tasks that certain owners have to complete.
 
 **c. Key takeaway**
 
 - What is one important thing you learned about designing systems or working with AI on this project?
+- One important thing I learned about system design is that you need to make sure you understand how each component/class works with other classes and how they interact. 

@@ -98,10 +98,28 @@ tests/test_pawpal.py .............                            [100%]
 
 Describe your app in numbered steps so a reader can follow along without watching a video:
 
-1. <!-- Describe this step -->
-2. <!-- Describe this step -->
-3. <!-- Describe this step -->
-4. <!-- Describe this step -->
-5. <!-- Add more steps as needed -->
+1. A user is able to add an owner with a name and their time availability. A Pet can also be assigned to them along with basic pet information
+2. After adding an owner and pet, you can assign tasks to a pet. Tasks can be given a priority level, duration, preferred start time, and whether or not this task is recurring. You are able to add, edit, or remove tasks.
+3. After adding tasks to your pet, the program creates a schedule for the day based on how much time the owner has to spend. 
+4. When generating schedules, if any conflicts such as tasks having overlapping times occurs there is a warning and you are able to see why this plan was created.
+5. After generating the schedule, you can mark tasks as complete. For any recurring tasks, if the user marks it as complete it will respawn.
+
+```
+================================================
+Today's Schedule
+================================================
+Daily plan for Alexa (75 of 90 min used):
+  08:00-08:30 — Logan: Morning walk (walk, 30 min, priority: high, preferred 08:00) → chosen (priority high, fit the remaining time)
+  08:30-08:40 — Logan: Breakfast (feed, 10 min, priority: high, preferred 09:00) → chosen (priority high, fit the remaining time)
+  08:40-08:45 — Mimo: Give meds (meds, 5 min, priority: medium, preferred 09:00) → chosen (priority medium, fit the remaining time)
+  08:45-09:05 — Mimo: Brush fur (grooming, 20 min, priority: low, preferred 12:00) → chosen (priority low, fit the remaining time)
+  09:05-09:15 — Logan: Dinner (feed, 10 min, priority: high, preferred 18:00) → chosen (priority high, fit the remaining time)
+
+Conflict warning: multiple tasks share a start time:
+  ! 09:00 — Logan's 'Breakfast', Mimo's 'Give meds'
+
+================================================
+Completed 'Morning walk'. Next occurrence due 2026-07-08 (daily).
+```
 
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or link to a demo video here -->
